@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/ripples.png);
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    z-index: 3;
+}
+
+.centerHeaderContent{
+    width: 960px;
+    height: 50px;
+    margin: 0 auto 0 auto;
+    z-index: 3;
+}
+
+h1 {
+    float: left;
+    padding: 5px;
+    height: 48px;
+    width: 320px;
+    margin: 0;
+    background-color: #4aaaa5;
+}
+
+ul {
+    float: right;
+    margin-right: -90px;
+    width: 320px;
+}
+
+li {
+    display: inline;
+}
+
+a.navLinks {
+    text-decoration: none;
+}
+
+a.navLinks:hover {
+    color: teal;
+}
+
+section {
+    clear: both;
+    height: 10%; /* oddly enough it seems like theis height doesnt matter */
+    width: 960px;
+    margin: 100px auto 150px auto;
+    /* not sure if the 7% on bottom is good 
+    but helps footer not colide when zooming in */
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #dddddd; 
+    padding: 1% 2% 1% 2%;
+}
+
+h2 {
+    text-align: left;
+}
+
+#aboutMe {
+    float: left;
+    height: 350px;
+    width: 300px;
+    padding: 0 2% 0 0;
+}
+
+p{
+    line-height: 1.5;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 8px solid #4aaaa5;
+    background-color: #666666;
+}
+
+input {
+    border: 2px solid #dddddd;
+}
+
+textarea {
+    text-align: left;
+    height: 150px;
+    width: 100%;
+    border: 2px solid #dddddd;
+    resize: none;
+}
+
+.theRealSubmitButton {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 2% 4% 2% 4%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.galleryBackground{
+    overflow: hidden;
+/*     margin-left: 10%;
+ */    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallerySpacer {
+    margin: 0 20px 10px 20px;
+}
+
+a.galleryContainer {
+    float: left;
+    position: relative;
+}
+
+img.galleryLink {
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+h4{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    padding: 10%;
+    background-color: #4aaaa5;
+    transform: translate(-50%, -50%);
+}
+
+.twoLineCenter {
+    padding: 5%;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* used for headings and backgrounds */
+h2 {color: #4aaaa5}
+
+/* Main header background color & Main content background color*/
+h1, h4 {color: #ffffff}
+
+/* For heading fonts use */
+h1, h2, h3, h4 {font-family: 'Georgia', Times, Times New Roman, serif;}
+
+/* For all other fonts use */
+p, a, li {font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;}
+
+/* used for paragraphs and all text besides the headings */
+.navLinks, p, li, h3 {color: #777777}
+
+@media screen and (max-width:980px) {
+
+    section {
+        width: 748px;
+    }
+    .centerHeaderContent{
+        width: 748px;
+    }
+    #aboutMe {
+        height: 300px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    section {
+        width: 620px;
+    }
+    .centerHeaderContent{
+        width: 620px;
+    }
+    #aboutMe {
+        height: 275px;
+        width: 225px;
+    }
+}
+
+
+@media screen and (min-width: 321px) and 
+(max-width:640px) {
+    section {
+        width: 90%;
+    }
+    .centerHeaderContent{
+        width: 90%;
+    }
+    #aboutMe {
+        height: 250px;
+        width: 200px;
+    }
+    section {
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (max-width:611px) 
+{
+    ul {
+        display: block;
+        clear: both;
+        float: left;
+        padding: 15px 0 0 70px;
+        height: 100%;
+        width: 120%;
+        margin: 2px 0 400px -50px;
+        background-color: #777777;
+        border-bottom: 2px solid #cccccc;
+    }
+
+    .navLinks {
+        color: #ffffff;
+    }
+    section {
+        margin-top: 130px;
+        margin-bottom: 120px;
+    }
+
+    .centerHeaderContent {
+        background-color: #4aaaa5;
+        width: 100%;
+        border-bottom: 2px solid lightgray;
+    }
+
+    h1 {
+        padding-left: 13.2px; /* gotta go the distance */
+    }
+
+}
+
+@media screen and (max-width:475px) 
+{
+    .clear{
+        display: block;
+        clear: both;
+    }
+    .mediaCenter{
+      margin: 0 auto;
+      width: 100%;
+      float: none;
+    }
+
+    #aboutMe {
+        margin: 0 0 0 25%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    section {
+        width: 300px;
+    }
+    .centerHeaderContent{
+        width: 320px;
+    }
+    #aboutMe {
+        height: 200px;
+        width: 150px;
+    }
+    .makeBlock{
+        display: block;
+    }
+}
