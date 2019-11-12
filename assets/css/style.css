@@ -176,7 +176,8 @@ h2 {
 
 /* Main header background color & Main content background color*/
 h1,
-h4 {
+h4,
+#footP {
     color: #ffffff
 }
 
